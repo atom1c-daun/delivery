@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RoboDelivery Control</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>RoboDelivery Control Panel</h1>
+        </header>
+
+        <main>
+            <section id="robot-status">
+                <div class="status-item">
+                    <span class="status-label">Status:</span>
+                    <span id="current-status" class="status-value">Null</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Battery:</span>
+                    <span id="battery-level" class="status-value">Null</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Location:</span>
+                    <span id="current-location" class="status-value">Null</span>
+                </div>
+            </section>
+
+            <section id="map-view">
+                <div id="map-container"></div>
+                <p>Click/Tap on the map to set destination</p>
+            </section>
+
+            <section id="robot-control">
+                <button id="start-delivery" class="control-button">Start</button>
+                <button id="pause-delivery" class="control-button">Pause</button>
+                <button id="return-to-base" class="control-button">Return</button>
+            </section>
+
+            <section id="arduino-connection">
+                <button id="connect-arduino" class="control-button">Connect Arduino</button>
+                <p id="connection-status">Not connected</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
